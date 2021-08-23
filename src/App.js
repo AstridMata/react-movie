@@ -1,26 +1,20 @@
 // import logo from './logo.svg';
 // import './App.css';
+import React from "react";
+import Navbar from "./components/Navbar.js";
+import Section from "./components/Section.js";
+import Cards from "./components/Cards.js";
 
 //azucar sintactico: JSX => JS + HTML/XML
 
 function App() {
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-         hOLA A TODAS
-        </a>
-      </header>
-    </div>
+    <>
+      <Navbar/>
+      <Section/>
+      <Cards/>
+    </>
   );
 }
 
