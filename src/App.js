@@ -2,19 +2,35 @@
 // import './App.css';
 import React from "react";
 import Navbar from "./components/Navbar.js";
-import Section from "./components/Section.js";
-import Cards from "./components/Cards.js";
-
-//azucar sintactico: JSX => JS + HTML/XML
+import Peliculas from "./components/Peliculas.js";
+import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import Programas from "./components/Programas.js";
+import Personas from "./components/Personas.js";
+import NotFound from "./components/NotFound.js";
 
 function App() {
 
   return (
-    <>
+    <Router>
       <Navbar/>
-      <Section/>
-      <Cards/>
-    </>
+
+      <Switch>
+        <Route exact path= "/programas">
+          <Programas/>
+        </Route>
+        <Route exact path= "/peliculas">
+          <Peliculas/>
+        </Route>
+        <Route exact path= "/personas">
+          <Personas/>
+        </Route>
+        <Route path= "*">
+          <NotFound/>
+        </Route>
+      </Switch>
+      
+      
+    </Router>
   );
 }
 
