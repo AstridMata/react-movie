@@ -1,6 +1,6 @@
 
 
-const Programas = () => {
+const Series = () => {
 
     
 
@@ -12,4 +12,4 @@ const Programas = () => {
      );
 }
  
-export default Programas;
+export default Series;

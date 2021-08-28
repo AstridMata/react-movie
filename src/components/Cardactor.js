@@ -1,6 +1,6 @@
 import React from "react";
-
-const Cardperson = (props) => {
+import { Link } from "react-router-dom";
+const Cardactor = (props) => {
     
     
     return ( 
@@ -9,8 +9,8 @@ const Cardperson = (props) => {
  <img src={'https://image.tmdb.org/t/p/original'+props.image}  className="card-img-top" alt="..."></img>
  
   <div className="card-body">
-    <h5 className="card-title">{props.name} </h5>
-    <p className="card-text">{props.popularity} </p>
+  <Link to={"/actores/"+props.id}> <h5 className="card-title">{props.name} </h5></Link>
+    <p className="card-text">Popularidad: {props.popularity} </p>
     
   </div>
 </div> 
@@ -19,4 +19,4 @@ const Cardperson = (props) => {
      );
 }
  
-export default Cardperson;
+export default Cardactor;

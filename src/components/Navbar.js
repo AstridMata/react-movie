@@ -3,7 +3,7 @@ const Navbar = () => {
     return ( 
         <div>
             <nav className="navbar navbar-expand-lg navbar navbar-dark bg-dark">
-  <a className="navbar-brand" href="#">Peliculas</a>
+  <a className="navbar-brand" href="#">CINE EN CASA</a>
   <a className="navbar-brand" href="#">
     <img src="https://us.123rf.com/450wm/coliap/coliap1110/coliap111001249/10888392-pel%C3%ADculas-de-cine-con-palomitas-de-ma%C3%ADz-aisladas-sobre-fondo-blanco.jpg?ver=6" style={{width:`2rem`},{height:`2rem`}}></img>
   </a>
@@ -16,10 +16,10 @@ const Navbar = () => {
         <Link className="nav-link" to="/peliculas">Peliculas </Link>
       </li>
       <li className="nav-item active">
-        <Link className="nav-link" to="/programas">Programas de Televisión </Link>
+        <Link className="nav-link" to="/series">Series </Link>
       </li>
       <li className="nav-item">
-        <Link className="nav-link" to="/personas">Personas</Link>
+        <Link className="nav-link" to="/actores">Actores</Link>
       </li>
       <li className="nav-item">
         <a className="nav-link" href="#">Más</a>
