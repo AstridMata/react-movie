@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import Programas from "./components/Programas.js";
 import Personas from "./components/Personas.js";
 import NotFound from "./components/NotFound.js";
+import PeliculasDetalles from "./components/PeliculasDetalles.js";
 
 function App() {
 
@@ -20,6 +21,9 @@ function App() {
         </Route>
         <Route exact path= "/peliculas">
           <Peliculas/>
+                </Route>
+        <Route exact path= "/peliculas/:id">
+          <PeliculasDetalles/>
         </Route>
         <Route exact path= "/personas">
           <Personas/>
