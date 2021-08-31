@@ -9,6 +9,8 @@ import Actores from "./components/Actores.js";
 import NotFound from "./components/NotFound.js";
 import PeliculasDetalles from "./components/PeliculasDetalles.js";
 import ActoresDetalles from "./components/ActoresDetalles.js";
+import SeriesDetalles from "./components/SeriesDetalles.js";
+import Home from "./components/Home.js";
 
 
 function App() {
@@ -18,8 +20,14 @@ function App() {
       <Navbar/>
 
       <Switch>
+      <Route exact path= "/">
+          <Home/>
+        </Route>
         <Route exact path= "/series">
           <Series/>
+        </Route>
+        <Route exact path= "/series/:id">
+          <SeriesDetalles/>
         </Route>
         <Route exact path= "/peliculas">
           <Peliculas/>
