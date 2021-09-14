@@ -16,7 +16,7 @@ const Peliculas = () => {
         <div>
 
             <div className="row mx-auto">
-                {films.map(item => <div  key={item.id} className="col-lg-3 py-3" ><Cards
+                {films.map(item => <div  key={item.id} className="col-lg-3 col-sm-1 py-3" ><Cards
                     title={item.original_title}
                     release_date={item.release_date}
                     image={item.poster_path}

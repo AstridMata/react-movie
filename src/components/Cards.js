@@ -5,7 +5,7 @@ const Cards = (props) => {
 
   return (
 
-    <div className="card" style={{ width: "18rem" }}>
+    <div className="card" style={{ width: "15rem" }}>
       <img src={'https://image.tmdb.org/t/p/w500' + props.image} className="card-img-top" alt="..." />
 
       <div className="card-body">
