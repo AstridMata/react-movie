@@ -2,16 +2,17 @@
 // import './App.css';
 import React from "react";
 import Navbar from "./components/Navbar.js";
-import Peliculas from "./components/Peliculas.js";
+import Peliculas from "./views/Peliculas.js";
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
-import Series from "./components/Series.js";
-import Actores from "./components/Actores.js";
-import NotFound from "./components/NotFound.js";
+import Series from "./views/Series.js";
+import Actores from "./views/Actores.js";
+import NotFound from "./views/NotFound.js";
 import PeliculasDetalles from "./components/PeliculasDetalles.js";
 import ActoresDetalles from "./components/ActoresDetalles.js";
 import SeriesDetalles from "./components/SeriesDetalles.js";
-import Home from "./components/Home.js";
-
+import Home from "./views/Home.js";
+import Favorite from "./components/Favorite.js";
+import Registro from "./views/Registro.js";
 
 function App() {
 
@@ -39,8 +40,12 @@ function App() {
           <Actores/>
         </Route>
         <Route exact path= "/actores/:id">
-          <ActoresDetalles/>
+          <ActoresDetalles/></Route>
+          <Route exact path="/favorite">
+         <Favorite />
           </Route>
+          <Route exact path= "/registro">
+          <Registro/></Route>
         <Route path= "*">
           <NotFound/>
         </Route>

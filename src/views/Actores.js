@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Cardactor from './Cardactor';
+import Cardactor from '../components/Cardactor';
 
 const Actores = () => {
 
@@ -14,9 +14,9 @@ console.log(actores);
 
 return ( 
         <>
-        
+        <center><h2>Los más Populares</h2>
         <div className="row mx-auto">
-                {actores.map(item => <div  key={item.id} className="col-lg-3 py-3" ><Cardactor
+                {actores.map(item => <div  key={item.id} className=" col-sm-6 col-md-4 col-lg-3 py-3" ><Cardactor
                     name={item.name}
                     popularity={item.popularity}
                     image={item.profile_path}
@@ -25,7 +25,7 @@ return (
                     place_of_birth={item.place_of_birth}
                     id={item.id}
                 /></div>)};
-            </div>
+            </div></center>
         </>
      );
 }

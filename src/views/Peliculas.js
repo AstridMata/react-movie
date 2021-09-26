@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Cards from './Cards';
+import Cards from '../components/Cards';
 
 const Peliculas = () => {
 
@@ -14,9 +14,9 @@ const Peliculas = () => {
     
     return (
         <div>
-
+<center><h2>Cartelera</h2>
             <div className="row mx-auto">
-                {films.map(item => <div  key={item.id} className="col-lg-3 col-sm-1 py-3" ><Cards
+                {films.map(item => <div  key={item.id} className="col-sm-6 col-md-4 col-lg-3 py-3 " ><Cards
                     title={item.original_title}
                     release_date={item.release_date}
                     image={item.poster_path}
@@ -24,7 +24,7 @@ const Peliculas = () => {
                     id={item.id}
 
                 /></div>)};
-            </div>
+            </div></center>
         </div>
     );
 }
