@@ -1,52 +1,70 @@
-//FavoriteButton.js
-import React, {useState} from 'react';
-import CardFavorite from './CardFavorite'; 
+// `import React, { useEffect, useState} from 'react';
+// import CardFavorite from './CardFavorite';
 
-const Favorite = () => {
+// const Favorite = ({ movie }) => {
+//     const [isFavorite, setIsFavorite] = useState(false);
 
-    const [favorite, setFavorite] = useState("");
-    const [results, setResults] = useState([]);
+//     const onClick = (e) => {
+//         e.preventDefault();
+//         setIsFavorite(e.target.value);
+//         if (isFavorite) {
+//             removeFavorite();
+//         } else {
+//             addFavorite();
+//         }
+//     };
 
-    const onClick = e => {
-        e.preventDefault();
+//     const checkFavorite = async () => {
+//         const key = `favorite ${movie.id}`;
+//         const checking = await Storage.instance.get(key);
 
-        setFavorite(e.target.value);
+//         //if its in favorite, showing the star
+//         if (checking !== null) {
+//             setIsFavorite(true);
+//         }
+//     };
 
-        fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${process.env.REACT_APP_MOVIE_}&language=en-US&page=1&include_adult=false&query=${e.target.value}`)
-        .then((response) => response.json())
-        .then((data) => {
-            if (!data.errors) {
-                setResults(data.results);
-            } else {
-                setResults([]);
-            }
-        });
-    };
+//     const addFavorite = async () => {
+//         const key = `favorite ${movie.id}`;
+//         const stored = await Storage.instance.store(key, JSON.stringify(movie));
 
-    return ( 
-        <div className="favorite-page">
-            <div className="container">
-                <div className="favorite-content">
-                    <div className="input-wrapper">
-                    <button className="btn btn-outline-success">
-                        value={favorite}
-                        onClick={onClick}
-                        </button>
-                    </div>
+//         if (stored) {
+//             setIsFavorite(true);
+//         }
+//     };
 
-                    {results.length > 0 && (
-                        <ul className="results" style={{color: "red"}}>
-                            {results.map(movie => (
-                                <li key={movie.id}>
-                                    <CardFavorite movie={movie} />
-                                </li>
-                            ))}
-                        </ul>
-                    )}
-                </div>
-            </div>
-        </div>
-     );
-}
- 
-export default Favorite;
+//     const removeFavorite = async () => {
+//         const key = `favorite ${movie.id}`;
+//         const deleted = await Storage.instance.remove(key);
+
+//         if (deleted) {
+//             setIsFavorite(false);
+//         }
+//     };
+
+//     useEffect(() => {
+//         checkFavorite();
+//     }, [isFavorite]);
+
+//     return (
+//         <>
+//             <button className="btn btn-outline-success">
+//                 value={isFavorite}
+//                 onClick={onClick}
+//             </button>
+//             {isFavorite.length > 0 && (
+//                         <ul className="isFavorite" style={{color: "red"}}>
+//                             {isFavorite.map(movie => (
+//                                 <li key={movie.id}>
+//                                     <CardFavorite movie={movie} />
+//                                 </li>
+//                             ))}
+//                         </ul>
+//                     )}
+//         </>
+//     );
+// };
+
+
+
+// export default Favorite;`
