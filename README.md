@@ -1,23 +1,20 @@
 # Movie React App 🎬
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was my first experience with react, as well as my first time consuming and running an api.
+
+The intention was to create a basic home page that would give you the option to review the most popular movies, series and actors at the moment.
+
+Support me with bootstrap to make the design and make it responsive.
 
 ## Authors ✒️
 
 Astrid Mata - Initial Work, Documentation 
 
-
 Rosinni Rodriguez - Support and Corrections 
 
-You can also look at the list of all contributors who have participated in this project
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ## Deploy 📋:
-See Deployment to deploy the project.
-
+See Deployment the project.
+https://astridmata.github.io/react-movie/
 #
 ❤️ Astrid Mata 😊
